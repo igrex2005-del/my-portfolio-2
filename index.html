@@ -4,130 +4,280 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Webora Studio | Websites That Stand Out</title>
-<meta name="description" content="Webora Studio creates modern, premium and mobile-friendly websites for businesses.">
+<meta name="description" content="Webora Studio creates premium, modern and mobile-friendly websites for businesses.">
+<title>Webora Studio | Digital Experiences</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
+:root{
+ --bg:#0b0b0b;
+ --panel:#151515;
+ --gold:#d8b878;
+ --white:#f8f6f1;
+ --muted:#aaa49a;
+ --line:#302a20;
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:#101010;color:#fff;font-family:Arial,sans-serif}
-:root{--gold:#d6b77b;--muted:#aaa}
+body{
+ background:var(--bg);
+ color:var(--white);
+ font-family:'DM Sans',sans-serif;
+}
 a{text-decoration:none;color:inherit}
-header{height:82px;padding:0 8%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #292929}
-.logo{font: bold 25px Georgia;color:var(--gold);letter-spacing:1px}
-nav{display:flex;gap:28px;font-size:13px;color:#ddd}
+.container{width:88%;max-width:1200px;margin:auto}
+
+header{
+ position:sticky;top:0;z-index:10;
+ background:rgba(11,11,11,.94);
+ backdrop-filter:blur(12px);
+ border-bottom:1px solid var(--line);
+}
+.nav{
+ height:82px;display:flex;
+ align-items:center;justify-content:space-between;
+}
+.logo{font-size:24px;font-weight:700;letter-spacing:2px;color:var(--gold)}
+.logo small{display:block;font-size:9px;letter-spacing:5px;text-align:center;color:white}
+nav{display:flex;gap:30px;font-size:13px;color:#ddd}
 nav a:hover{color:var(--gold)}
-.hero{min-height:650px;padding:120px 10%;display:flex;align-items:center;background:radial-gradient(ellipse at 80% 40%,#3b3020 0%,#17130f 30%,#101010 70%)}
-.hero-content{max-width:760px}
-.eyebrow{color:var(--gold);letter-spacing:4px;font-size:12px;text-transform:uppercase}
-h1{font:normal clamp(48px,7vw,86px)/1.05 Georgia,serif;margin:28px 0}
+.nav-btn,.button{
+ display:inline-block;background:var(--gold);
+ color:#111;padding:14px 23px;
+ border-radius:30px;font-weight:700;font-size:12px;
+ transition:.25s;
+}
+.nav-btn:hover,.button:hover{background:#f0d49b;transform:translateY(-2px)}
+
+.hero{
+ min-height:590px;display:flex;align-items:center;
+ background:
+ linear-gradient(90deg,#0b0b0b 5%,rgba(11,11,11,.94) 42%,rgba(11,11,11,.2)),
+ url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800') center/cover;
+}
+.hero-content{max-width:690px;padding:100px 0}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase}
+h1{
+ font:600 clamp(48px,7vw,82px)/1.08 'Playfair Display',serif;
+ margin:25px 0;
+}
 h1 span{color:var(--gold);font-style:italic}
-.hero p{max-width:560px;color:var(--muted);font-size:17px;line-height:1.8}
-.btn{display:inline-block;background:var(--gold);color:#111;padding:16px 28px;margin-top:32px;font-size:12px;font-weight:bold;letter-spacing:1px}
-.btn:hover{background:#f0d49b}
-section{padding:100px 9%}
-.section-label{color:var(--gold);font-size:11px;letter-spacing:3px}
-h2{font:normal 44px Georgia;margin:18px 0}
-.intro{color:var(--muted);line-height:1.8;max-width:580px}
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;margin-top:45px}
-.project{background:#1b1b1b;border:1px solid #333;overflow:hidden}
-.project img{width:100%;height:250px;object-fit:cover;display:block}
-.project-info{padding:28px}
-.project-info h3{font:25px Georgia;color:var(--gold);margin-bottom:12px}
-.project-info p{color:var(--muted);line-height:1.7;font-size:14px}
-.project-info small{display:block;margin-top:18px;color:#888;letter-spacing:1px}
-.about{background:#181818}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
-.service{padding:30px 22px;border:1px solid #353535;background:#171717}
-.service h3{font:22px Georgia;color:var(--gold);margin-bottom:15px}
+.hero p{max-width:560px;color:#c1bdb5;font-size:16px;line-height:1.9}
+.hero-actions{display:flex;align-items:center;gap:25px;flex-wrap:wrap;margin-top:32px}
+.text-link{font-size:13px;color:var(--white)}
+.text-link:hover{color:var(--gold)}
+
+section{padding:95px 0}
+.section-top{text-align:center;margin-bottom:42px}
+.section-label{font-size:11px;letter-spacing:4px;color:var(--gold)}
+h2{font:600 42px 'Playfair Display',serif;margin:15px 0}
+.section-top p,.about-text{color:var(--muted);line-height:1.8;max-width:620px;margin:auto}
+
+.services{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.service{
+ padding:32px 26px;background:var(--panel);
+ border:1px solid var(--line);border-radius:14px;
+ transition:.25s;
+}
+.service:hover{transform:translateY(-5px);border-color:var(--gold)}
+.service-number{color:var(--gold);font-size:12px}
+.service h3{font:23px 'Playfair Display',serif;margin:20px 0 12px}
 .service p{font-size:14px;line-height:1.8;color:var(--muted)}
-.contact{text-align:center;background:radial-gradient(ellipse at center,#332a1c,#101010 70%)}
-.contact p{color:var(--muted);margin:auto;max-width:500px;line-height:1.8}
-footer{padding:30px 8%;border-top:1px solid #292929;display:flex;justify-content:space-between;color:#888;font-size:12px}
-@media(max-width:700px){
-header{padding:0 5%;height:72px}
-.logo{font-size:20px}
-nav{gap:12px;font-size:11px}
-.hero{padding:95px 7%;min-height:570px}
-section{padding:75px 7%}
-h2{font-size:36px}
-.projects,.services{grid-template-columns:1fr}
-.project img{height:220px}
-footer{gap:15px;flex-direction:column;text-align:center}
+
+.projects{background:#111}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.project{
+ background:var(--panel);border:1px solid var(--line);
+ border-radius:15px;overflow:hidden;
+}
+.project img{width:100%;height:260px;object-fit:cover;display:block}
+.project-info{padding:27px}
+.project-type{color:var(--gold);font-size:10px;letter-spacing:2px}
+.project h3{font:27px 'Playfair Display',serif;margin:12px 0}
+.project p{font-size:14px;line-height:1.8;color:var(--muted)}
+.project-tag{
+ display:inline-block;margin-top:18px;padding:7px 12px;
+ border:1px solid #51452f;border-radius:20px;
+ color:var(--gold);font-size:10px;
+}
+
+.about-grid{
+ display:grid;grid-template-columns:1fr 1fr;
+ align-items:center;gap:60px;
+}
+.about-image{width:100%;height:360px;object-fit:cover;border-radius:14px}
+.about-copy p{color:var(--muted);line-height:1.9;margin-top:18px}
+.about-copy h2{line-height:1.2}
+
+.contact{
+ text-align:center;
+ background:radial-gradient(ellipse at center,#292116,#0b0b0b 70%);
+ border-top:1px solid var(--line);
+}
+.contact p{color:var(--muted);line-height:1.8;max-width:520px;margin:0 auto}
+.contact .button{margin-top:28px}
+.email{display:block;color:var(--gold);margin-top:24px;font-size:14px}
+
+footer{border-top:1px solid var(--line);padding:28px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;color:#888;font-size:12px}
+
+@media(max-width:750px){
+ .container{width:90%}
+ .nav{height:72px}
+ nav{gap:12px;font-size:11px}
+ .nav-btn{display:none}
+ .logo{font-size:19px}
+ .hero{min-height:570px;background-position:60% center}
+ .hero-content{padding:85px 0}
+ h1{font-size:51px}
+ section{padding:70px 0}
+ h2{font-size:35px}
+ .services,.project-grid,.about-grid{grid-template-columns:1fr}
+ .project img{height:220px}
+ .about-image{height:260px}
+ .footer-inner{flex-direction:column;text-align:center}
+}
+@media(max-width:390px){
+ nav{gap:8px;font-size:10px}
+ h1{font-size:43px}
 }
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="logo">WEBORA.</div>
-<nav>
-<a href="#about">About</a>
-<a href="#work">Work</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
+ <div class="container nav">
+  <a href="#" class="logo">WEBORA.<small>STUDIO</small></a>
+  <nav>
+   <a href="#about">About</a>
+   <a href="#services">Services</a>
+   <a href="#projects">Projects</a>
+   <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav-btn">LET'S TALK →</a>
+ </div>
 </header>
 
 <main>
+
 <div class="hero">
-<div class="hero-content">
-<div class="eyebrow">Independent Web Design Studio</div>
-<h1>We turn ideas into <span>digital experiences.</span></h1>
-<p>We create clean, modern and memorable websites that help businesses build a stronger online presence.</p>
-<a class="btn" href="#work">EXPLORE OUR WORK →</a>
-</div>
+ <div class="container">
+  <div class="hero-content">
+   <div class="eyebrow">Independent Web Design Studio</div>
+   <h1>We build <span>digital experiences.</span></h1>
+   <p>Transforming ideas into beautiful, modern websites that help businesses create a stronger online presence.</p>
+   <div class="hero-actions">
+    <a href="#projects" class="button">EXPLORE OUR WORK →</a>
+    <a href="#about" class="text-link">Discover Webora ↗</a>
+   </div>
+  </div>
+ </div>
 </div>
 
-<section id="about" class="about">
-<div class="section-label">01 / ABOUT US</div>
-<h2>Design with purpose.<br>Built to make an impact.</h2>
-<p class="intro">Webora Studio is a growing independent web design studio focused on creating beautiful, user-friendly websites for businesses. Our approach combines thoughtful design, clear communication and modern web experiences.</p>
+<section id="about">
+ <div class="container about-grid">
+  <div>
+   <img class="about-image"
+    src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1000"
+    alt="Modern creative workspace">
+  </div>
+  <div class="about-copy">
+   <div class="section-label">01 / ABOUT WEBORA</div>
+   <h2>Good design makes a lasting impression.</h2>
+   <p>Webora Studio is an independent, growing web design studio focused on creating attractive, user-friendly websites for businesses.</p>
+   <p>We believe every business deserves a clear, professional and memorable online presence.</p>
+  </div>
+ </div>
 </section>
 
-<section id="work">
-<div class="section-label">02 / SELECTED WORK</div>
-<h2>Ideas brought to life.</h2>
-<p class="intro">A selection of independent concept projects created to explore modern business website design.</p>
-<div class="projects">
-<article class="project">
-<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900" alt="Modern luxury home interior">
-<div class="project-info">
-<h3>A&R Home Cleaning</h3>
-<p>A luxury-inspired cleaning business website concept with a focus on elegant presentation and simple navigation.</p>
-<small>CONCEPT PROJECT · HOME SERVICES</small>
-</div>
-</article>
-<article class="project">
-<img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=900" alt="Modern coffee shop">
-<div class="project-info">
-<h3>Brew & Bean</h3>
-<p>A modern café website concept designed to showcase the brand, atmosphere and customer experience.</p>
-<small>CONCEPT PROJECT · FOOD & DRINK</small>
-</div>
-</article>
-</div>
+<section id="services" class="projects">
+ <div class="container">
+  <div class="section-top">
+   <div class="section-label">02 / OUR SERVICES</div>
+   <h2>What we create.</h2>
+   <p>Thoughtful digital experiences designed around your business.</p>
+  </div>
+  <div class="services">
+   <div class="service">
+    <div class="service-number">01 — DESIGN</div>
+    <h3>Website Design</h3>
+    <p>Modern layouts and attractive visuals that give your business a professional online presence.</p>
+   </div>
+   <div class="service">
+    <div class="service-number">02 — EXPERIENCE</div>
+    <h3>Mobile-Friendly Websites</h3>
+    <p>Responsive experiences designed to work smoothly across phones, tablets and computers.</p>
+   </div>
+   <div class="service">
+    <div class="service-number">03 — BUSINESS</div>
+    <h3>Business Websites</h3>
+    <p>Clear service information and contact sections that help visitors understand your business.</p>
+   </div>
+  </div>
+ </div>
 </section>
 
-<section id="services" class="about">
-<div class="section-label">03 / WHAT WE DO</div>
-<h2>What we can create.</h2>
-<div class="services">
-<div class="service"><h3>Website Design</h3><p>Modern and attractive layouts designed around your business.</p></div>
-<div class="service"><h3>Mobile Friendly</h3><p>Responsive websites that adapt to phones, tablets and computers.</p></div>
-<div class="service"><h3>Business Websites</h3><p>Clear service pages and contact sections to help customers connect.</p></div>
-</div>
+<section id="projects">
+ <div class="container">
+  <div class="section-top">
+   <div class="section-label">03 / SELECTED CONCEPTS</div>
+   <h2>Ideas brought to life.</h2>
+   <p>Independent concept projects showcasing our website design direction.</p>
+  </div>
+
+  <div class="project-grid">
+   <article class="project">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1000"
+     alt="Bright modern home interior">
+    <div class="project-info">
+     <div class="project-type">HOME SERVICES</div>
+     <h3>SparkClean</h3>
+     <p>A modern cleaning business website concept with a fresh visual style and clear service presentation.</p>
+     <span class="project-tag">Independent concept project</span>
+    </div>
+   </article>
+
+   <article class="project">
+    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1000"
+     alt="Warm modern coffee shop">
+    <div class="project-info">
+     <div class="project-type">FOOD & DRINK</div>
+     <h3>Brew & Bean</h3>
+     <p>A stylish café website concept focused on atmosphere, branding and a welcoming customer experience.</p>
+     <span class="project-tag">Independent concept project</span>
+    </div>
+   </article>
+  </div>
+ </div>
 </section>
 
 <section id="contact" class="contact">
-<div class="section-label">04 / LET'S CONNECT</div>
-<h2>Have an idea in mind?</h2>
-<p>Let's explore how a thoughtful website could help your business stand out online.</p>
-<a class="btn" href="mailto:studiowebora96@gmail.com">GET IN TOUCH →</a>
+ <div class="container">
+  <div class="section-label">04 / START A CONVERSATION</div>
+  <h2>Have an idea in mind?</h2>
+  <p>Let's explore how a thoughtful website could help your business stand out online.</p>
+  <a class="button" href="mailto:studiowebora96@gmail.com?subject=Website%20Enquiry">
+   GET IN TOUCH →
+  </a>
+  <a class="email" href="mailto:studiowebora96@gmail.com">
+   studiowebora96@gmail.com
+  </a>
+ </div>
 </section>
+
 </main>
 
 <footer>
-<span>© 2026 WEBORA STUDIO</span>
-<span>GOOD IDEAS. BEAUTIFUL WEBSITES.</span>
+ <div class="container footer-inner">
+  <span>© 2026 WEBORA STUDIO</span>
+  <span>GOOD IDEAS. BEAUTIFUL WEBSITES.</span>
+ </div>
 </footer>
+
 </body>
 </html>
